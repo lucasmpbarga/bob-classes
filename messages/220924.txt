@@ -1,5 +1,7 @@
 Estudar:
+-Node Package Manager.
+-Como instalar e utilizar uma biblioteca javascript.
 -Como executar um arquivo ".js" direto pelo terminal sem o VsCode.
 -Como receber um input via teclado com javascript, no terminal.
--JavaScript Loops
--JavaScript Switch Statement
+-JavaScript Loops.
+-JavaScript Switch Statement.
