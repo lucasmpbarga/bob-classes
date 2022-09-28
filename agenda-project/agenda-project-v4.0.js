@@ -52,8 +52,10 @@ while (option.toLowerCase() !== "z") {
       console.log("");
       break;
     default:
-      console.log("Your option selected don't exist.");
-      console.log("");
+      if (option !== "") {
+        console.log("Your option selected don't exist.");
+        console.log("");
+      }
       break;
   }
 
