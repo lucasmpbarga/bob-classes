@@ -1,18 +1,18 @@
 // v4
-// Criar um menu com pelo menos 1 opcao
-// Criar uma funcionalidade capaz de pegar 1 numero digitado do teclado
-// Caso o numero digitado no teclado seja o numero da opcoa ele deve imprimir,
-// "Your option selected is X.", X deve ser o numero da opcao.
-// Caso seja selecionado uma opcao nao existente deve imprimir,
-// "Your option selected don't exist."
-// Implementar funcionalidade de fechar menu, quando digitar Z ou z.
-// Extra: Criar X opcoes no menu.
+// Criar um menu NO TERMINAL com as seguintes opcoes:
 // 1. Create
 // 2. Read:All
 // 3. Read:One
 // 4. Delete
 // 5. Update
 // Os nome acima sao apenas exemplos.
+// Criar funcionalidade capaz de pegar 1 numero digitado do teclado
+// Caso o numero digitado no teclado seja o numero da opcoa ele deve imprimir,
+// "Your option selected is X.", X deve representar a opcao selecionada.
+// Caso seja selecionado uma opcao nao existente deve imprimir,
+// "Your option selected don't exist."
+// Implementar funcionalidade de fechar menu, quando digitar Z ou z.
+// Recursos utilizados: require, dependencie, let, while, switch
 // **************************************************
 
 const prompt = require("prompt-sync")();
