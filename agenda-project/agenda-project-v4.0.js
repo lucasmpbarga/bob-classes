@@ -20,7 +20,7 @@ const prompt = require("prompt-sync")();
 let option = "";
 
 console.log("#######################");
-console.log("#### Agenda Project ###");
+console.log("#### contactList Project ###");
 console.log("#######################");
 console.log("1. Create new contact.");
 console.log("2. List all contacts.");
@@ -32,32 +32,27 @@ console.log("#######################");
 while (option.toLowerCase() !== "z") {
   switch (option) {
     case "1":
-      console.log("Your option selected is 1.");
-      console.log("");
+      console.log("Your option selected is Create new contact.");
       break;
     case "2":
-      console.log("Your option selected is 2.");
-      console.log("");
+      console.log("Your option selected is List all contacts.");
       break;
     case "3":
-      console.log("Your option selected is 3.");
-      console.log("");
+      console.log("Your option selected is Show one contact by index.");
       break;
     case "4":
-      console.log("Your option selected is 4.");
-      console.log("");
+      console.log("Your option selected is Delete contact by index.");
       break;
     case "5":
-      console.log("Your option selected is 5.");
-      console.log("");
+      console.log("Your option selected is Update contact by index.");
       break;
     default:
       if (option !== "") {
         console.log("Your option selected don't exist.");
-        console.log("");
       }
       break;
   }
 
+  console.log("");
   option = prompt("Select your option: ");
 }

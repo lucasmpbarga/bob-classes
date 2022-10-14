@@ -1,6 +1,6 @@
 // **************************************************
 // v1
-// criar agenda de contatos com as seguintes funcionalidades.
+// criar contactList de contatos com as seguintes funcionalidades.
 // criar uma funcao capaz de cadastrar um contato,
 // os contatos devem ter: nome, telefone e email.
 // criar uma funcao capaz de exibir todos os contatos
@@ -24,11 +24,11 @@
 
 // v1 *********************************************************
 // criando um array para armazenar meus contatos.
-const agenda = [];
+const contactList = [];
 
-//  criando uma funcao que insere um novo contato na agenda (no array agenda).
+//  criando uma funcao que insere um novo contato na contactList (no array contactList).
 const saveNewContact = (newContact) => {
-  agenda.push(newContact);
+  contactList.push(newContact);
 };
 
 // salvando 10 contatos
@@ -43,7 +43,7 @@ for (i = 0; i < 10; i++) {
 
 // criando uma funcao que lista todos os contatos.
 const listContacts = () => {
-  console.log(agenda);
+  console.log(contactList);
 };
 
 // executando funcao que lista os contatos.
@@ -53,12 +53,12 @@ listContacts();
 // v2 *********************************************************
 // printa usuario pelo index.
 const printOneContact = (index) => {
-  console.log("===REMOVED===", agenda[index]);
+  console.log("===REMOVED===", contactList[index]);
 };
 
 // remove usuario do array pelo index.
 const removeContactByIndex = (index) => {
-  agenda.splice(index, 1);
+  contactList.splice(index, 1);
 };
 
 // printando apenas 1 contato pelo seu index.
@@ -74,7 +74,7 @@ listContacts();
 // v3 *********************************************************
 // atualiza o contato pelo index passando o atributo que sera alterado e o novo valor.
 const updateContact = ({ index, attribute, newValue }) => {
-  const contact = agenda[index];
+  const contact = contactList[index];
   contact[attribute] = newValue;
   console.log("===UPDATED===", contact);
 };

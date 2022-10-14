@@ -3,7 +3,7 @@
 
 // **************************************************
 // v1
-// criar agenda de contatos com as seguintes funcionalidades.
+// criar contactList de contatos com as seguintes funcionalidades.
 // criar uma funcao capaz de cadastrar um contato,
 // os contatos devem ter: nome, telefone e email.
 // criar uma funcao capaz de exibir todos os contatos
@@ -100,7 +100,11 @@ console.table(table);
 // Import Lib Prompt for Input
 
 let input = require("prompt-sync")();
-let valueOption = input("Select Your Option : ").toLowerCase();
+
+const initialValue = "";
+
+let valueOption = initialValue;
+
 do {
   switch (valueOption) {
     case "1":
@@ -136,8 +140,11 @@ do {
       updateContact(1, "telphone", 21727272727);
       break;
     default:
-      console.log("Your option selected don't exist.");
+      if (valueOption !== initialValue) {
+        console.log("Your option selected don't exist.");
+      }
       break;
   }
+
   valueOption = input("Select Your Option : ").toLowerCase();
 } while (valueOption !== "z");

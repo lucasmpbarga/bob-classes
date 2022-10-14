@@ -1,23 +1,23 @@
-const agenda = [
+const contactList = [
   { nome: "Robert", telefone: "123123", email: "robert@email.com" },
   { nome: "Lucas", telefone: "123123", email: "lucas@email.com" },
   { nome: "Varela", telefone: "123123", email: "varela@email.com" },
 ];
 
-// console.log(agenda)
+// console.log(contactList)
 
-const agendaFormatada = agenda.map((pessoa) => pessoa.nome);
+const contactListFormatada = contactList.map((pessoa) => pessoa.nome);
 
-// console.log('agendaFormatada: ', agendaFormatada)
+// console.log('contactListFormatada: ', contactListFormatada)
 
-const pessoa = agendaFormatada.indexOf("Lucas");
+const pessoa = contactListFormatada.indexOf("Lucas");
 
 // console.log('=>', pessoa)
 
 const getIndexByName = (name) => {
-  const agendaFormatted = agenda.map((pessoa) => pessoa.nome);
+  const contactListFormatted = contactList.map((pessoa) => pessoa.nome);
 
-  return agendaFormatted.indexOf(name);
+  return contactListFormatted.indexOf(name);
 };
 
 const index = getIndexByName("Lucas");
@@ -28,17 +28,17 @@ console.log("index: ", index);
 // **************************************************
 // **************************************************
 
-// const agenda = ["Robert", "12345678", "aaa@mail.com"];
+// const contactList = ["Robert", "12345678", "aaa@mail.com"];
 
 // criar uma funcao capaz de deletar UM contato, pelo index. - splice() -  criação
 const deleteUsers = (index) => {
-  agenda.splice(index, 1);
+  contactList.splice(index, 1);
 };
 
 deleteUsers(1);
 
-// agenda.splice(1,1)
-console.log(agenda);
+// contactList.splice(1,1)
+console.log(contactList);
 
 // **************************************************
 // **************************************************
@@ -46,7 +46,7 @@ console.log(agenda);
 
 // * ********************************************************
 // v1
-// criar agenda de contatos com as seguintes funcionalidades. BLA BLA BLA OBJETIVO.
+// criar contactList de contatos com as seguintes funcionalidades. BLA BLA BLA OBJETIVO.
 // cadastrar um contato e exibir todos os contatos.
 // os contatos devem ter nome, telefone e email.
 // salvar pelo menos 3 contatos e imprimir a lista
@@ -62,11 +62,11 @@ console.log(agenda);
 // Read:One and Delete
 // * ********************************************************
 
-// const agenda = [];
+// const contactList = [];
 
 const newUser = (user) => {
   return;
-  agenda.push(user);
+  contactList.push(user);
 };
 
 newUser([(nameUser = "Robert"), (tel = "12345678"), (email = "aaa@mail.com")]);
@@ -84,14 +84,14 @@ newUser({
 });
 
 const listUsers = () => {
-  console.log("listUsers:", agenda);
+  console.log("listUsers:", contactList);
 };
 
 listUsers();
 
 // criar uma funcao capaz de imprimir apenas 1 dos contatos, pelo index.
 // const getContactByIndex = () => {
-//     console.log(agenda[index])
+//     console.log(contactList[index])
 // }
 
 // getContactByIndex(1)
