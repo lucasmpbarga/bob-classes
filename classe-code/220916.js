@@ -1,23 +1,23 @@
-const contactList = [
+const contacts = [
   { nome: "Robert", telefone: "123123", email: "robert@email.com" },
   { nome: "Lucas", telefone: "123123", email: "lucas@email.com" },
   { nome: "Varela", telefone: "123123", email: "varela@email.com" },
 ];
 
-// console.log(contactList)
+// console.log(contacts)
 
-const contactListFormatada = contactList.map((pessoa) => pessoa.nome);
+const contactsFormatada = contacts.map((pessoa) => pessoa.nome);
 
-// console.log('contactListFormatada: ', contactListFormatada)
+// console.log('contactsFormatada: ', contactsFormatada)
 
-const pessoa = contactListFormatada.indexOf("Lucas");
+const pessoa = contactsFormatada.indexOf("Lucas");
 
 // console.log('=>', pessoa)
 
 const getIndexByName = (name) => {
-  const contactListFormatted = contactList.map((pessoa) => pessoa.nome);
+  const contactsFormatted = contacts.map((pessoa) => pessoa.nome);
 
-  return contactListFormatted.indexOf(name);
+  return contactsFormatted.indexOf(name);
 };
 
 const index = getIndexByName("Lucas");
@@ -28,17 +28,17 @@ console.log("index: ", index);
 // **************************************************
 // **************************************************
 
-// const contactList = ["Robert", "12345678", "aaa@mail.com"];
+// const contacts = ["Robert", "12345678", "aaa@mail.com"];
 
 // criar uma funcao capaz de deletar UM contato, pelo index. - splice() -  criação
 const deleteUsers = (index) => {
-  contactList.splice(index, 1);
+  contacts.splice(index, 1);
 };
 
 deleteUsers(1);
 
-// contactList.splice(1,1)
-console.log(contactList);
+// contacts.splice(1,1)
+console.log(contacts);
 
 // **************************************************
 // **************************************************
@@ -46,7 +46,7 @@ console.log(contactList);
 
 // * ********************************************************
 // v1
-// criar contactList de contatos com as seguintes funcionalidades. BLA BLA BLA OBJETIVO.
+// criar contacts de contatos com as seguintes funcionalidades. BLA BLA BLA OBJETIVO.
 // cadastrar um contato e exibir todos os contatos.
 // os contatos devem ter nome, telefone e email.
 // salvar pelo menos 3 contatos e imprimir a lista
@@ -62,11 +62,11 @@ console.log(contactList);
 // Read:One and Delete
 // * ********************************************************
 
-// const contactList = [];
+// const contacts = [];
 
 const newUser = (user) => {
   return;
-  contactList.push(user);
+  contacts.push(user);
 };
 
 newUser([(nameUser = "Robert"), (tel = "12345678"), (email = "aaa@mail.com")]);
@@ -84,14 +84,14 @@ newUser({
 });
 
 const listUsers = () => {
-  console.log("listUsers:", contactList);
+  console.log("listUsers:", contacts);
 };
 
 listUsers();
 
 // criar uma funcao capaz de imprimir apenas 1 dos contatos, pelo index.
 // const getContactByIndex = () => {
-//     console.log(contactList[index])
+//     console.log(contacts[index])
 // }
 
 // getContactByIndex(1)

@@ -3,7 +3,7 @@
 
 // **************************************************
 // v1
-// criar contactList de contatos com as seguintes funcionalidades.
+// criar contacts de contatos com as seguintes funcionalidades.
 // criar uma funcao capaz de cadastrar um contato,
 // os contatos devem ter: nome, telefone e email.
 // criar uma funcao capaz de exibir todos os contatos

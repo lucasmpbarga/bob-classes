@@ -1,6 +1,6 @@
 // **************************************************
 // v1
-// criar contactList de contatos com as seguintes funcionalidades.
+// criar contacts de contatos com as seguintes funcionalidades.
 // criar uma funcao capaz de cadastrar um contato,
 // os contatos devem ter: nome, telefone e email.
 // criar uma funcao capaz de exibir todos os contatos
@@ -24,11 +24,11 @@
 
 // v1 *********************************************************
 // criando um array para armazenar meus contatos.
-const contactList = [];
+const contacts = [];
 
-//  criando uma funcao que insere um novo contato na contactList (no array contactList).
+//  criando uma funcao que insere um novo contato na contacts (no array contacts).
 const saveNewContact = (newContact) => {
-  contactList.push(newContact);
+  contacts.push(newContact);
 };
 
 // salvando 10 contatos
@@ -43,7 +43,7 @@ for (i = 0; i < 10; i++) {
 
 // criando uma funcao que lista todos os contatos.
 const listContacts = () => {
-  console.log(contactList);
+  console.log(contacts);
 };
 
 // executando funcao que lista os contatos.
@@ -53,12 +53,12 @@ listContacts();
 // v2 *********************************************************
 // printa usuario pelo index.
 const printOneContact = (index) => {
-  console.log("===REMOVED===", contactList[index]);
+  console.log("===REMOVED===", contacts[index]);
 };
 
 // remove usuario do array pelo index.
 const removeContactByIndex = (index) => {
-  contactList.splice(index, 1);
+  contacts.splice(index, 1);
 };
 
 // printando apenas 1 contato pelo seu index.
@@ -74,7 +74,7 @@ listContacts();
 // v3 *********************************************************
 // atualiza o contato pelo index passando o atributo que sera alterado e o novo valor.
 const updateContact = ({ index, attribute, newValue }) => {
-  const contact = contactList[index];
+  const contact = contacts[index];
   contact[attribute] = newValue;
   console.log("===UPDATED===", contact);
 };

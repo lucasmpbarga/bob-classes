@@ -20,7 +20,7 @@ const prompt = require("prompt-sync")();
 let option = "";
 
 console.log("#######################");
-console.log("#### contactList Project ###");
+console.log("#### contacts Project ###");
 console.log("#######################");
 console.log("1. Create new contact.");
 console.log("2. List all contacts.");
