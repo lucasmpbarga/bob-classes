@@ -1,6 +1,7 @@
 // v5
-// integrar opcoes do menu com funcionalidades
-// desenvolvidas nas versoes v1, v2, v3
+// integrar o menu feito na v4 com as
+// funcionalidades desenvolvidas nas versoes 1,2,3
+// implementar de forma que um usuario possa utilizar os recursos
 
 const prompt = require("prompt-sync")();
 
@@ -80,7 +81,7 @@ const renderMenu = () => {
   console.log("#########################");
   console.log("1. Create new contact.");
   console.log("2. List all contacts.");
-  console.log("3. Show one contact by index.");
+  console.log("3. Filter by name.");
   console.log("4. Delete contact by index.");
   console.log("5. Update contact by index.");
   console.log("#########################");
