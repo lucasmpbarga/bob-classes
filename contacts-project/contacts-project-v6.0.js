@@ -203,6 +203,7 @@ while (option.toLowerCase() !== "z") {
       const newValue = prompt("New value: ");
 
       updateContact(updateContactId, attribute, newValue);
+
       tapAnyToContinue();
       break;
     default:
