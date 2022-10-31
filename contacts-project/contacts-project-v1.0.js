@@ -1,6 +1,5 @@
 // **************************************************
 // v1
-// criar contacts de contatos com as seguintes funcionalidades. BLA BLA BLA OBJETIVO.
 // cadastrar um contato e exibir todos os contatos.
 // os contatos devem ter nome, telefone e email.
 // salvar pelo menos 3 contatos e imprimir a lista
