@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 16px 0px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    
+}
+
+.space-button {
+    margin-top: 16px;
+}
+
+.table-container {
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.trash-icon {
+    cursor: pointer;
+}
+
+.trash-icon:hover {
+    color: gray;
+}
+
+.edit-icon {
+    cursor: pointer;
+}
+
+.edit-icon:hover {
+    color: gray;
+}
