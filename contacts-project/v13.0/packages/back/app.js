@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const orderBy = require("lodash.orderby");
 
 const app = express();
 const hostname = "localhost";
@@ -73,7 +74,8 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/contacts", (req, res) => {
-  res.send(contacts);
+  const orderedContacts = orderBy(contacts, ["id"]);
+  res.send(orderedContacts);
 });
 
 app.post("/contacts", function (req, res) {
