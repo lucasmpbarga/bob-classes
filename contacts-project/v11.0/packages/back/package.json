@@ -1,0 +1,8 @@
+{
+  "name": "back",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "json-server --watch db.json --port 3002"
+  }
+}

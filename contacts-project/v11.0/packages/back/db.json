@@ -1,0 +1,64 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "First Contact",
+      "phone": "111-111-111",
+      "email": "first_contact@email.com"
+    },
+    {
+      "id": 2,
+      "name": "First Silva",
+      "phone": "111-111-111",
+      "email": "first_silva@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Second Contact",
+      "phone": "222-222-222",
+      "email": "second_contact@email.com"
+    },
+    {
+      "id": 4,
+      "name": "Second Silva",
+      "phone": "111-111-111",
+      "email": "second_silva@email.com"
+    },
+    {
+      "id": 5,
+      "name": "Third Contact",
+      "phone": "333-333-333",
+      "email": "third_contact@email.com"
+    },
+    {
+      "id": 6,
+      "name": "Third Silva",
+      "phone": "111-111-111",
+      "email": "third_silva@email.com"
+    },
+    {
+      "name": "Create",
+      "phone": "111",
+      "email": "create@email.com",
+      "id": 7
+    },
+    {
+      "name": "Read",
+      "phone": "222",
+      "email": "read@email.com",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Update",
+      "phone": "333",
+      "email": "update@email.com"
+    },
+    {
+      "id": 10,
+      "name": "Delete",
+      "phone": "444",
+      "email": "delete@email.com"
+    }
+  ]
+}

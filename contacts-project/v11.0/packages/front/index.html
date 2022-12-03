@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML&&CSS-CRUD</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/trash.css" />
+    <link rel="stylesheet" href="css/file-document.css" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <div class="main-container">
+      <form class="form-container">
+        <div class="six rows">
+          <label for="name-input">Name</label>
+          <input
+            class="u-full-width"
+            type="text"
+            placeholder="Lorem Ipsum"
+            id="name-input"
+          />
+        </div>
+        <div class="six rows">
+          <label for="phone-input">Phone</label>
+          <input
+            class="u-full-width"
+            type="tel"
+            placeholder="(00)96666-8888"
+            id="phone-input"
+          />
+        </div>
+        <div class="six rows">
+          <label for="email-input">Email</label>
+          <input
+            class="u-full-width"
+            type="email"
+            placeholder="email@email.com"
+            id="email-input"
+          />
+        </div>
+        <input
+          class="button-primary space-button"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+      <table class="table-container">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dave Gamache</td>
+            <td>(00)96666-8888</td>
+            <td>email@email.com</td>
+            <td>
+              <i class="gg-trash trash-icon"></i>
+            </td>
+            <td>
+              <i class="gg-file-document edit-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>Dwayne Johnson</td>
+            <td>(00)96666-8888</td>
+            <td>email@email.com</td>
+            <td>
+              <i class="gg-trash trash-icon"></i>
+            </td>
+            <td>
+              <i class="gg-file-document edit-icon"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
