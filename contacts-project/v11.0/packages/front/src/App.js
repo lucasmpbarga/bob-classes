@@ -63,7 +63,7 @@ function App() {
     <div class="main-container">
       <div class="form-container">
         <div class="six rows">
-          <label for="name-input">Name</label>
+          <label>Name</label>
           <input
             class="u-full-width"
             type="text"
@@ -76,7 +76,7 @@ function App() {
           />
         </div>
         <div class="six rows">
-          <label for="phone-input">Phone</label>
+          <label>Phone</label>
           <input
             class="u-full-width"
             type="tel"
@@ -89,7 +89,7 @@ function App() {
           />
         </div>
         <div class="six rows">
-          <label for="email-input">Email</label>
+          <label>Email</label>
           <input
             class="u-full-width"
             type="email"
