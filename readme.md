@@ -1,17 +1,5 @@
-# Bob-Classes
+# bob-classes
 
-[Drive](https://drive.google.com/drive/folders/1KHmb-MOFCjAOTbeT-M3oeM3-rj6dEIUX?usp=sharing).
+## contacts-project
 
-# How to run the files
-
-### JS file.
-
-node my_file.js
-<br />
-<br />
-
-### TS file.
-
-npm install -g ts-node
-
-npx ts-node my_file.ts
+didactic project to guide beginners in programming
