@@ -1,81 +1,34 @@
-const express = require("express");
-const cors = require("cors");
-const orderBy = require("lodash.orderby");
+import cors from "cors";
+import express, { json } from "express";
+import pkg from "pg";
 
 const app = express();
 const hostname = "localhost";
 const port = 3002;
 
-const contacts = [
-  {
-    id: 1,
-    name: "First Contact",
-    phone: "111-111-111",
-    email: "first_contact@email.com",
-  },
-  {
-    id: 2,
-    name: "First Silva",
-    phone: "111-111-111",
-    email: "first_silva@email.com",
-  },
-  {
-    id: 3,
-    name: "Second Contact",
-    phone: "222-222-222",
-    email: "second_contact@email.com",
-  },
-  {
-    id: 4,
-    name: "Second Silva",
-    phone: "111-111-111",
-    email: "second_silva@email.com",
-  },
-  {
-    id: 5,
-    name: "Third Contact",
-    phone: "333-333-333",
-    email: "third_contact@email.com",
-  },
-  {
-    id: 6,
-    name: "Third Silva",
-    phone: "111-111-111",
-    email: "third_silva@email.com",
-  },
-  {
-    name: "Create",
-    phone: "111",
-    email: "create@email.com",
-    id: 7,
-  },
-  {
-    name: "Read",
-    phone: "222",
-    email: "read@email.com",
-    id: 8,
-  },
-  {
-    id: 9,
-    name: "Update",
-    phone: "333",
-    email: "update@email.com",
-  },
-  {
-    id: 10,
-    name: "Delete",
-    phone: "444",
-    email: "delete@email.com",
-  },
-];
+const pool = new pkg.Pool({
+  user: "root",
+  host: "localhost",
+  database: "contact_db",
+  password: "root",
+  port: 5432,
+});
 
 app.use(cors());
 
-app.use(express.json());
+app.use(json());
 
 app.get("/contacts", (req, res) => {
-  const orderedContacts = orderBy(contacts, ["id"]);
-  res.send(orderedContacts);
+  pool.query(
+    "SELECT * FROM contact c ORDER BY c.contact_id ASC;",
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+
+      res.status(200).send(results.rows);
+    }
+  );
 });
 
 app.post("/contacts", function (req, res) {
@@ -84,43 +37,58 @@ app.post("/contacts", function (req, res) {
     ...req.body,
   };
 
-  contacts.push(contact);
+  pool.query(
+    `INSERT INTO contact(name, phone, email) VALUES ('${contact.name}', '${contact.phone}', '${contact.email}');`,
+    (error) => {
+      if (error) {
+        throw error;
+      }
 
-  res.send(contact);
+      res.sendStatus(200);
+    }
+  );
 });
 
 app.put("/contacts/:id", function (req, res) {
   const { id } = req.params;
   const parsedId = parseInt(id);
 
-  console.log(req.body);
-
   const contact = {
     id: parsedId,
     ...req.body,
   };
 
-  const index = contacts.findIndex((contact) => contact.id === parsedId);
+  pool.query(
+    `UPDATE contact SET 
+    name = '${contact.name}',
+    phone = '${contact.phone}', 
+    email = '${contact.email}' 
+    WHERE contact_id = ${contact.id};`,
+    (error) => {
+      if (error) {
+        throw error;
+      }
 
-  if (index > -1) {
-    contacts.splice(index, 1);
-    contacts.push(contact);
-  }
-
-  res.send(contact);
+      res.sendStatus(200);
+    }
+  );
 });
 
 app.delete("/contacts/:id", function (req, res) {
   const { id } = req.params;
   const parsedId = parseInt(id);
 
-  const index = contacts.findIndex((contact) => contact.id === parsedId);
+  pool.query(
+    `DELETE FROM contact c
+    WHERE c.contact_id = ${parsedId};`,
+    (error) => {
+      if (error) {
+        throw error;
+      }
 
-  if (index > -1) {
-    contacts.splice(index, 1);
-  }
-
-  res.sendStatus(200);
+      res.sendStatus(200);
+    }
+  );
 });
 
 app.listen(port, () => {
