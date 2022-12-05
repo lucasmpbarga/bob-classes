@@ -60,12 +60,12 @@ function App() {
   }, [update]);
 
   return (
-    <div class="main-container">
-      <div class="form-container">
-        <div class="six rows">
+    <div className="main-container">
+      <div className="form-container">
+        <div className="six rows">
           <label>Name</label>
           <input
-            class="u-full-width"
+            className="u-full-width"
             type="text"
             placeholder="Lorem Ipsum"
             id="name-input"
@@ -75,10 +75,10 @@ function App() {
             }
           />
         </div>
-        <div class="six rows">
+        <div className="six rows">
           <label>Phone</label>
           <input
-            class="u-full-width"
+            className="u-full-width"
             type="tel"
             placeholder="(00)96666-8888"
             id="phone-input"
@@ -88,10 +88,10 @@ function App() {
             }
           />
         </div>
-        <div class="six rows">
+        <div className="six rows">
           <label>Email</label>
           <input
-            class="u-full-width"
+            className="u-full-width"
             type="email"
             placeholder="email@email.com"
             id="email-input"
@@ -101,11 +101,11 @@ function App() {
             }
           />
         </div>
-        <button class="button-primary space-button" onClick={handleCreate}>
+        <button className="button-primary space-button" onClick={handleCreate}>
           Submit
         </button>
       </div>
-      <table class="table-container">
+      <table className="table-container">
         <thead>
           <tr>
             <th>Name</th>
@@ -117,19 +117,19 @@ function App() {
         </thead>
         <tbody>
           {contacts.map((contact) => (
-            <tr>
+            <tr key={contact.id}>
               <td>{contact.name}</td>
               <td>{contact.phone}</td>
               <td>{contact.email}</td>
               <td>
                 <i
-                  class="gg-trash trash-icon"
+                  className="gg-trash trash-icon"
                   onClick={() => handleDelete(contact.id)}
                 ></i>
               </td>
               <td>
                 <i
-                  class="gg-file-document edit-icon"
+                  className="gg-file-document edit-icon"
                   onClick={() => handleUpdate(contact.id)}
                 ></i>
               </td>
